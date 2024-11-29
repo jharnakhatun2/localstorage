@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LocalStorage</title>
+    <style>
+        input[type='text'] {
+            padding: 5px 7px;
+            outline: none;
+        }
+
+        button {
+            padding: 7px;
+            background: #088a08;
+            color: white;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        li {
+            list-style: none;
+            padding: 5px;
+            font-size: 20px;
+        }
+    </style>
 </head>
+
 <body>
+    <input id="product-name" type="text" placeholder="Product Name">
+    <input id="product-quantity" type="text" placeholder="Product Quantity">
+    <button>Add Product</button>
+    <ul id="product-container">
+
+    </ul>
     <script src="script.js"></script>
 </body>
+
 </html>
