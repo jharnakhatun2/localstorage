@@ -8,6 +8,7 @@ const productQuantityValue = productQuantity.value.trim();
 productName.value = "";
 productQuantity.value = '';
 displayProduct(productNameValue, productQuantityValue);
+setProductInLocalStorage(productNameValue, productQuantityValue);
 }
 
 //display product in ui
@@ -26,4 +27,15 @@ const getProductFromLocalStorage = () =>{
         cart = JSON.parse(existProduct);
     }
     return cart;
+}
+
+//set product in localstorage
+const setProductInLocalStorage = (product, quantity) =>{
+//get initial variable and value in localstorage
+const cart =  getProductFromLocalStorage();
+// value insert into cart obj
+cart[product] = quantity
+// set obj in localStorage
+const cartString = JSON.stringify(cart);
+localStorage.setItem('cart', cartString);
 }
