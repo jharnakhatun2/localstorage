@@ -39,3 +39,15 @@ cart[product] = quantity
 const cartString = JSON.stringify(cart);
 localStorage.setItem('cart', cartString);
 }
+
+//display localStorage product in UI
+const displayLocalStoragesProduct = () =>{
+//get localStorage obj
+const products =  getProductFromLocalStorage();
+for(let product in products){
+    const quantity = products[product];
+    displayProduct(product, quantity);
+}
+console.log(products);
+}
+displayLocalStoragesProduct();
