@@ -17,3 +17,13 @@ const displayProduct = (product, quantity) => {
     li.innerText = `${product} : ${quantity}`;
     ul.appendChild(li)
 }
+
+//initial variable and value created
+const getProductFromLocalStorage = () =>{
+    let cart = {};
+    const existProduct = localStorage.getItem('cart');
+    if(existProduct){
+        cart = JSON.parse(existProduct);
+    }
+    return cart;
+}
